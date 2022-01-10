@@ -14,6 +14,7 @@ import { WeatherWidget } from '../../Widgets/WeatherWidget/WeatherWidget';
 // Utils
 import { getDateTime } from './functions/getDateTime';
 import { greeter } from './functions/greeter';
+import { t } from 'i18next';
 
 export const Header = (): JSX.Element => {
   const { hideHeader, hideDate, showTime } = useSelector(
@@ -44,7 +45,7 @@ export const Header = (): JSX.Element => {
 
       {!hideHeader && (
         <span className={classes.HeaderMain}>
-          <h1>{greeting}</h1>
+          <h1>{greeting}{t('test.nest')}</h1>
           <WeatherWidget />
         </span>
       )}

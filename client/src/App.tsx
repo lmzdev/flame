@@ -19,6 +19,12 @@ import { Settings } from './components/Settings/Settings';
 import { Bookmarks } from './components/Bookmarks/Bookmarks';
 import { NotificationCenter } from './components/NotificationCenter/NotificationCenter';
 
+//i18n
+import './i18n'
+import {useTranslation} from "react-i18next";
+import {availableLanguages} from "./i18n";
+
+
 // Get config
 store.dispatch<any>(getConfig());
 
@@ -28,6 +34,9 @@ if (localStorage.token) {
 }
 
 export const App = (): JSX.Element => {
+  const {t, i18n} = useTranslation()
+  //i18n.changeLanguage("de")
+  
   const { config, loading } = useSelector((state: State) => state.config);
 
   const dispath = useDispatch();
