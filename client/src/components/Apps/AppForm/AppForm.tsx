@@ -18,10 +18,8 @@ export const AppForm = ({ modalHandler }: Props): JSX.Element => {
   const { appInUpdate } = useSelector((state: State) => state.apps);
 
   const dispatch = useDispatch();
-  const { addApp, updateApp, setEditApp } = bindActionCreators(
-    actionCreators,
-    dispatch
-  );
+  const { addApp, updateApp, setEditApp, createNotification } =
+    bindActionCreators(actionCreators, dispatch);
 
   const [useCustomIcon, toggleUseCustomIcon] = useState<boolean>(false);
   const [customIcon, setCustomIcon] = useState<File | null>(null);
@@ -58,13 +56,26 @@ export const AppForm = ({ modalHandler }: Props): JSX.Element => {
   const formSubmitHandler = (e: SyntheticEvent<HTMLFormElement>): void => {
     e.preventDefault();
 
+    for (let field of ['name', 'url', 'icon'] as const) {
+      if (/^ +$/.test(formData[field])) {
+        createNotification({
+          title: 'Error',
+          message: `Field cannot be empty: ${field}`,
+        });
+
+        return;
+      }
+    }
+
     const createFormData = (): FormData => {
       const data = new FormData();
 
       if (customIcon) {
         data.append('icon', customIcon);
       }
+
       data.append('name', formData.name);
+      data.append('description', formData.description);
       data.append('url', formData.url);
       data.append('isPublic', `${formData.isPublic ? 1 : 0}`);
 
