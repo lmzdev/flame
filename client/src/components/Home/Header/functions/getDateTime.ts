@@ -1,7 +1,8 @@
 import { parseTime } from '../../../../utility';
+import { t } from 'i18next'
 
 export const getDateTime = (): string => {
-  const days = localStorage.getItem('daySchema')?.split(';') || [
+  /*const days = localStorage.getItem('daySchema')?.split(';') || [
     'Sunday',
     'Monday',
     'Tuesday',
@@ -24,7 +25,10 @@ export const getDateTime = (): string => {
     'October',
     'November',
     'December',
-  ];
+  ];*/
+
+  const days = t('dateTime.daySchema').split(';')
+  const months = t('dateTime.monthSchema').split(';')
 
   const now = new Date();
 
@@ -37,7 +41,7 @@ export const getDateTime = (): string => {
 
   if (!hideDate) {
     if (!useAmericanDate) {
-      dateEl = `${days[now.getDay()]}, ${now.getDate()} ${
+      dateEl = `${days[now.getDay()]}, ${now.getDate()}. ${
         months[now.getMonth()]
       } ${now.getFullYear()}`;
     } else {
