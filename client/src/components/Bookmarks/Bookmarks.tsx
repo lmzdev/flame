@@ -28,6 +28,8 @@ import { BookmarkGrid } from './BookmarkGrid/BookmarkGrid';
 import { Form } from './Form/Form';
 import { Table } from './Table/Table';
 
+import { t } from 'i18next'
+
 interface Props {
   searching: boolean;
 }
@@ -143,28 +145,28 @@ export const Bookmarks = (props: Props): JSX.Element => {
         />
       </Modal>
 
-      <Headline title="All Bookmarks" subtitle={<Link to="/">Go back</Link>} />
+      <Headline title={t('bookmarks.pageTitle')} subtitle={<Link to="/">{t('nav.back')}</Link>} />
 
       {isAuthenticated && (
         <div className={classes.ActionsContainer}>
           <ActionButton
-            name="Add Category"
+            name={t('bookmarks.addCategory')}
             icon="mdiPlusBox"
             handler={() => openFormForAdding(ContentType.category)}
           />
           <ActionButton
-            name="Add Bookmark"
+            name={t('bookmarks.addBookmark')}
             icon="mdiPlusBox"
             handler={() => openFormForAdding(ContentType.bookmark)}
           />
           <ActionButton
-            name="Edit Categories"
+            name={t('bookmarks.editCategories')}
             icon="mdiPencil"
             handler={() => showTableForEditing(ContentType.category)}
           />
           {showTable && tableContentType === ContentType.bookmark && (
             <ActionButton
-              name="Finish Editing"
+              name={t('bookmarks.finishEditing')}
               icon="mdiPencil"
               handler={finishEditing}
             />

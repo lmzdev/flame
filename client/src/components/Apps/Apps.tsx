@@ -22,6 +22,7 @@ import { AppTable } from './AppTable/AppTable';
 import { State } from '../../store/reducers';
 import { bindActionCreators } from 'redux';
 import { actionCreators } from '../../store';
+import { t } from 'i18next'
 
 interface Props {
   searching: boolean;
@@ -78,21 +79,21 @@ export const Apps = (props: Props): JSX.Element => {
       </Modal>
 
       <Headline
-        title="All Applications"
-        subtitle={<Link to="/">Go back</Link>}
+        title={t('applications.pageTitle')}
+        subtitle={<Link to="/">{t('nav.back')}</Link>}
       />
 
       {isAuthenticated && (
         <div className={classes.ActionsContainer}>
           <ActionButton
-            name="Add"
+            name={t('applications.addApp')}
             icon="mdiPlusBox"
             handler={() => {
               setEditApp(null);
               toggleModal();
             }}
           />
-          <ActionButton name="Edit" icon="mdiPencil" handler={toggleEdit} />
+          <ActionButton name={t('applications.edit')} icon="mdiPencil" handler={toggleEdit} />
         </div>
       )}
 

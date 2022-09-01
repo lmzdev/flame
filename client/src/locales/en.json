@@ -1,5 +1,38 @@
 {
-    "common": {
-      "learnReact": "Learn React"
+  "common": {
+    "learnReact": "Learn React",
+    "header": {
+      "greeter": {
+        "morning": "Good Morning!",
+        "day": "Good Afternoon!",
+        "noon": "Hey There!",
+        "evening": "Good Evening!",
+        "night": "Good Night!",
+        "generic": "Hello!"
+      }
+    },
+    "nav": {
+      "back": "Go Back"
+    },
+    "bookmarks": {
+      "name": "Bookmarks",
+      "pageTitle": "All Bookmarks",
+      "addCategory": "Add Category",
+      "addBookmark": "Add Bookmark",
+      "editCategories": "Edit Categories",
+      "finishEditing":"Finish editing",
+      "noBookmarks": "You don't have any bookmarks. You can add a new one from /bookmarks menu"
+    },
+    "applications": {
+      "name": "Applications",
+      "pageTitle": "All Applications",
+      "addApp": "Add",
+      "edit": "Edit"
+
+    },
+    "settings": {
+      "name": "Settings",
+      "pageTitle": "Settings"
     }
   }
+}

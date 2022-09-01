@@ -24,6 +24,7 @@ import { Header } from './Header/Header';
 
 // Utils
 import { escapeRegex } from '../../utility';
+import { t } from 'i18next'
 
 export const Home = (): JSX.Element => {
   const {
@@ -116,7 +117,7 @@ export const Home = (): JSX.Element => {
 
       {!config.hideApps && (isAuthenticated || apps.some((a) => a.isPinned)) ? (
         <Fragment>
-          <SectionHeadline title="Applications" link="/applications" />
+          <SectionHeadline title={t('applications.name')} link="/applications" />
           {appsLoading ? (
             <Spinner />
           ) : (
@@ -139,7 +140,7 @@ export const Home = (): JSX.Element => {
       {!config.hideCategories &&
       (isAuthenticated || categories.some((c) => c.isPinned)) ? (
         <Fragment>
-          <SectionHeadline title="Bookmarks" link="/bookmarks" />
+          <SectionHeadline title={t('bookmarks.name')}  link="/bookmarks" />
           {bookmarksLoading ? (
             <Spinner />
           ) : (

@@ -26,6 +26,8 @@ import { Container, Headline } from '../UI';
 // Data
 import { routes } from './settings.json';
 
+import { t } from 'i18next'
+
 export const Settings = (): JSX.Element => {
   const { isAuthenticated } = useSelector((state: State) => state.auth);
 
@@ -33,7 +35,7 @@ export const Settings = (): JSX.Element => {
 
   return (
     <Container>
-      <Headline title="Settings" subtitle={<Link to="/">Go back</Link>} />
+      <Headline title={t('settings.pageTitle')} subtitle={<Link to="/">{t('nav.back')}</Link>} />
       <div className={classes.Settings}>
         {/* NAVIGATION MENU */}
         <nav className={classes.SettingsNav}>

@@ -3,6 +3,40 @@
       "learnReact": "React lernen",
       "test":{
         "nest":"hallo ja"
+      },
+      "header": {
+        "greeter": {
+          "morning": "Guten Morgen!",
+          "day": "Willkommen!",
+          "noon":"Mahlzeit!",
+          "evening":"Guten Abend!",
+          "night":"Gute Nacht!",
+          "generic":"Hallo!"
+
+        }
+      },
+      "nav": {
+        "back": "Zurück"
+      },
+      "bookmarks": {
+        "name": "Lesezeichen",
+        "pageTitle": "Alle Lesezeichen",
+        "addCategory": "Kategorie hinzufügen",
+        "addBookmark": "Lesezeichen hinzufügen",
+        "editCategories": "Kategorien bearbeiten",
+        "finishEditing":"Bearbeiten beenden",
+        "noBookmarks": "You don't have any Lesezeichen. You can add a new one from /bookmarks menu"
+      },
+      "applications": {
+        "name": "Apps",
+        "pageTitle": "Alle Apps",
+        "addApp": "Hinzufügen",
+        "edit": "Bearbeiten"
+  
+      },
+      "settings": {
+        "name": "Einstellungen",
+        "pageTitle": "Einstellungen"
       }
     }
   }
