@@ -36,7 +36,14 @@
       },
       "settings": {
         "name": "Einstellungen",
-        "pageTitle": "Einstellungen"
+        "pageTitle": "Einstellungen",
+        "weather": {
+          "apiKeyHint":"Verwendet OpenWeatherMap. Ein API-Key wird benötigt, um das Wetter abzurufen.",
+          "location":"Standort",
+          "other":"Sonstige",
+          "tempUnit":"Einheiten",
+          "addData":"Zusätzliche Wetterdaten"
+        }
       },
       "dateTime": {
         "daySchema":"Sonntag;Montag;Dienstag;Mittwoch;Donnerstag;Freitag;Samstag",

@@ -32,7 +32,14 @@
     },
     "settings": {
       "name": "Settings",
-      "pageTitle": "Settings"
+      "pageTitle": "Settings",
+      "weather": {
+        "apiKeyHint":"Now using OpenWeatherMap. Key is required for weather module to work.",
+        "location":"Location",
+        "other":"Other",
+        "tempUnit":"Temperature unit",
+        "addData":"Additional weather data"
+      }
     },
     "dateTime": {
       "daySchema":"Sunday;Monday;Tuesday;Wednesday;Thursday;Friday;Saturday",
