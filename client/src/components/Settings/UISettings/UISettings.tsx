@@ -158,54 +158,11 @@ export const UISettings = (): JSX.Element => {
           onChange={(e) => inputChangeHandler(e, { isBool: true })}
         >
           <option value={1}>Friday, October 22 2021</option>
-          <option value={0}>Friday, 22 October 2021</option>
+          <option value={0}>Friday, 22. October 2021</option>
         </select>
       </InputGroup>
 
-      {/* CUSTOM GREETINGS */}
-      <InputGroup>
-        <label htmlFor="greetingsSchema">Custom greetings</label>
-        <input
-          type="text"
-          id="greetingsSchema"
-          name="greetingsSchema"
-          placeholder="Good day;Hi;Bye!"
-          value={formData.greetingsSchema}
-          onChange={(e) => inputChangeHandler(e)}
-        />
-        <span>
-          Greetings must be separated with semicolon. All 4 messages must be
-          filled, even if they are the same
-        </span>
-      </InputGroup>
-
-      {/* CUSTOM DAYS */}
-      <InputGroup>
-        <label htmlFor="daySchema">Custom weekday names</label>
-        <input
-          type="text"
-          id="daySchema"
-          name="daySchema"
-          placeholder="Sunday;Monday;Tuesday"
-          value={formData.daySchema}
-          onChange={(e) => inputChangeHandler(e)}
-        />
-        <span>Names must be separated with semicolon</span>
-      </InputGroup>
-
-      {/* CUSTOM MONTHS */}
-      <InputGroup>
-        <label htmlFor="monthSchema">Custom month names</label>
-        <input
-          type="text"
-          id="monthSchema"
-          name="monthSchema"
-          placeholder="January;February;March"
-          value={formData.monthSchema}
-          onChange={(e) => inputChangeHandler(e)}
-        />
-        <span>Names must be separated with semicolon</span>
-      </InputGroup>
+     
 
       {/* === SECTIONS OPTIONS === */}
       <SettingsHeadline text="Sections" />
