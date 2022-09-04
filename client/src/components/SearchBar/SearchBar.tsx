@@ -113,6 +113,7 @@ export const SearchBar = (props: Props): JSX.Element => {
         const url = `${primarySearch.template}${encodedURL}`;
         redirectUrl(url, sameTab);
       }
+      clearSearch();
     } else if (e.code === 'Escape') {
       clearSearch();
     }
