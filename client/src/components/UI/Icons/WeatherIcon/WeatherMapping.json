@@ -10,8 +10,8 @@
     {
       "code": 801,
       "icon": {
-        "day": "partly-cloudy-day",
-        "night": "partly-cloudy-night"
+        "day": "clear-day",
+        "night": "clear-night"
       }
     },
     {
@@ -24,8 +24,8 @@
     {
       "code": 803,
       "icon": {
-        "day": "cloudy",
-        "night": "cloudy"
+        "day": "partly-cloudy-day",
+        "night": "partly-cloudy-night"
       }
     },
     {
